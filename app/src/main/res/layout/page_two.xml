@@ -16,20 +16,37 @@
         android:text="Aller à la page 3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="146dp"
-        android:layout_marginTop="216dp"
         android:layout_marginEnd="147dp"
-        android:layout_marginBottom="189dp"
+        android:layout_marginBottom="47dp"
         android:text="Je suis la page n°2"
-        app:layout_constraintBottom_toTopOf="@+id/btnPage3"
+        app:layout_constraintBottom_toTopOf="@+id/textFromMain"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFromMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="229dp"
+        android:text="Texte affiché ici"
+        app:layout_constraintBottom_toTopOf="@+id/btnPage3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
