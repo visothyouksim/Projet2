@@ -16,15 +16,15 @@ class PageTwo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.page_two)
 
-        println("ATTENTION PRINT")
-        println(intent.getIntExtra("id", 0))
+//        println("ATTENTION PRINT")
+//        println(intent.getIntExtra("id", 0))
 
         findViewById<Button>(R.id.btnPage3).setOnClickListener{
             val intentNextActivity : Intent = Intent(this, PageThree::class.java)
             startActivity(intentNextActivity)
         }
 
-        textView = findViewById(R.id.editText)
+        textView = findViewById(R.id.textFromMain)
         val text = intent.getStringExtra("TEXT")
         textView.text = text
     }
