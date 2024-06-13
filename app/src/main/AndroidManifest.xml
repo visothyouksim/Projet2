@@ -27,6 +27,9 @@
         <activity
             android:name=".PageThree"
             android:parentActivityName=".PageTwo" />
+        <activity
+            android:name=".ErrorPage"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
