@@ -10,6 +10,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editText: EditText
     private lateinit var button: Button
 
+    private lateinit var editTextLogin: EditText
+    private lateinit var editTextPassword: EditText
+    private lateinit var buttonLogin: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,6 +32,25 @@ class MainActivity : AppCompatActivity() {
                 putExtra("TEXT", text)
             }
             startActivity(intent)
+        }
+
+        editTextLogin = findViewById(R.id.editTextLogin)
+        editTextPassword = findViewById(R.id.editTextPassword)
+        buttonLogin = findViewById(R.id.btnLogin)
+
+        buttonLogin.setOnClickListener {
+            val login = editTextLogin.text.toString()
+            val password = editTextPassword.text.toString()
+
+            if (login == "user" && password == "password") {
+                val intent = Intent(this, PageTwo::class.java).apply {
+                    putExtra("LOGIN", login)
+                }
+                startActivity(intent)
+            } else {
+                val intent = Intent(this, ErrorPage::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

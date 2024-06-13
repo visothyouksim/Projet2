@@ -27,5 +27,8 @@ class PageTwo : AppCompatActivity() {
         textView = findViewById(R.id.textFromMain)
         val text = intent.getStringExtra("TEXT")
         textView.text = text
+
+        val login = intent.getStringExtra("LOGIN")
+        textView.text = "Bonjour, $login"
     }
 }
